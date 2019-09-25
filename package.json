@@ -1,0 +1,24 @@
+{
+  "name": "kalpana2019judging",
+  "version": "1.0.0",
+  "description": "The server-side logic for the Kalpana 2019 Judging App",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IEEEPESITSouthCampus/Kalpana2019JudgingApp-Backend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IEEEPESITSouthCampus/Kalpana2019JudgingApp-Backend/issues"
+  },
+  "homepage": "https://github.com/IEEEPESITSouthCampus/Kalpana2019JudgingApp-Backend#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.1"
+  }
+}
