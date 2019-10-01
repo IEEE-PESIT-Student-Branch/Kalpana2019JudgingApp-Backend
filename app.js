@@ -85,7 +85,7 @@ app.post('/scores',function(req,res){
                             console.log(err);
                         }
                         else{
-                            console.log(dbteam.scores[dbjudge.round-1]);
+                            console.log(dbteam.scores[round-1]);
                             dbteam.scores[dbjudge.round-1].push({judge_id: dbjudge.judge_id,score: score});
                             dbteam.save(function(err,updatedTeam){
                                 res.redirect('/teams/'+uid);
