@@ -7,7 +7,8 @@ var Team = require('./models/team');
 var Judge = require('./models/judge');
 
 app.use(bodyParser.urlencoded({extended: true}));
-mongoose.connect("mongodb://localhost/judging");
+// mongoose.connect("mongodb://localhost/judging");
+mongoose.connect("mongodb://ujzzkkcofxbbnm7v2g7h:AZctNdYmyxcKbRaJ28BM@bpsupq4wqahgisw-mongodb.services.clever-cloud.com:27017/bpsupq4wqahgisw");
 
 var round=1;
 
