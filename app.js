@@ -8,7 +8,7 @@ var Judge = require('./models/judge');
 
 app.use(bodyParser.urlencoded({extended: true}));
 // mongoose.connect("mongodb://localhost/judging");
-mongoose.connect("mongodb://ujzzkkcofxbbnm7v2g7h:AZctNdYmyxcKbRaJ28BM@bpsupq4wqahgisw-mongodb.services.clever-cloud.com:27017/bpsupq4wqahgisw");
+mongoose.connect("mongodb://uf0shymlfpq2ktltywlh:MI1f3I8ck6tctCNHQo1s@byvyroz6ewveb0q-mongodb.services.clever-cloud.com:27017/byvyroz6ewveb0q");
 
 var round=1;
 
@@ -30,10 +30,9 @@ var round=1;
 
 // Judge.create(
 //     {
-//         judge_id: "diHiyjVlCBdBdsnB6REcepRESvI3",
-//         round: 1,
+//         judge_id: "5SIPAfPBzddMvC8axae8VWO68LF2",
 //         teams: [
-//             "#1","#5"
+//             "65","32","26","66","85","28","21","9","53","35","1"
 //         ]
 //     }
 // );
