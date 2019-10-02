@@ -10,7 +10,21 @@ app.use(bodyParser.urlencoded({extended: true}));
 // mongoose.connect("mongodb://localhost/judging");
 mongoose.connect("mongodb://uf0shymlfpq2ktltywlh:MI1f3I8ck6tctCNHQo1s@byvyroz6ewveb0q-mongodb.services.clever-cloud.com:27017/byvyroz6ewveb0q");
 
-var round=1;
+var round=2;
+
+Team.find({},function(err,res){
+    if(err){
+        console.log(err);
+    }
+    else{
+        res.forEach(function (val){
+            scores = val.scores;
+            scores.push([]);
+            scores.push([]);
+        });
+        res.save();
+    }
+});
 
 // Team.create(
 //     {
@@ -32,7 +46,7 @@ var round=1;
 //     {
 //         judge_id: "5SIPAfPBzddMvC8axae8VWO68LF2",
 //         teams: [
-//             "65","32","26","66","85","28","21","9","53","35","1"
+            
 //         ]
 //     }
 // );
