@@ -21,8 +21,10 @@ Team.find({},function(err,res){
             scores = val.scores;
             scores.push([]);
             scores.push([]);
+            // console.log(scores);
+            val.save();
         });
-        res.save();
+        // res.save();
     }
 });
 
