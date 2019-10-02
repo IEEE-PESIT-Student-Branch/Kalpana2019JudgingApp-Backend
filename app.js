@@ -19,8 +19,8 @@ Team.find({},function(err,res){
     else{
         res.forEach(function (val){
             scores = val.scores;
-            scores.push([]);
-            scores.push([]);
+            // scores.push([]);
+            // scores.push([]);
             // console.log(scores);
             val.save();
         });
