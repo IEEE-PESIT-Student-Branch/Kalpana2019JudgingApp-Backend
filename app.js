@@ -19,39 +19,10 @@ Team.find({},function(err,res){
     else{
         res.forEach(function (val){
             scores = val.scores;
-            // scores.push([]);
-            // scores.push([]);
-            // console.log(scores);
             val.save();
         });
-        // res.save();
     }
 });
-
-// Team.create(
-//     {
-//         team_id : "#1",
-//         name: "cd 8086",
-//         room: "CAD Lab",
-//         scores: [
-//             [
-//                 // {
-//                 //     judge_id: "bE6AqAXccXgZQIN8NK5i1rrxTJY2",
-//                 //     score: -1
-//                 // }
-//             ]
-//         ]
-//     }
-// );
-
-// Judge.create(
-//     {
-//         judge_id: "5SIPAfPBzddMvC8axae8VWO68LF2",
-//         teams: [
-            
-//         ]
-//     }
-// );
 
 app.get('/teams/:judgeid',function(req,res){
     Judge.find({judge_id: req.params.judgeid},function(err,dbjudge){
@@ -60,7 +31,6 @@ app.get('/teams/:judgeid',function(req,res){
         }
         else{
             var jteams = dbjudge[0].teams;
-            // console.log(jteams);
             Team.find({'team_id': {$in : jteams}},function(err,dbteams){
                 if(err){
                     console.log(err);
@@ -69,7 +39,6 @@ app.get('/teams/:judgeid',function(req,res){
                     dbteams.sort(function(a,b){
                         return a.team_id.localeCompare(b.team_id);
                     });
-                    // console.log({round: round, teams: dbteams});
                     res.send({round: round, teams: dbteams});
                 }
             });
@@ -108,13 +77,13 @@ app.post('/scores',function(req,res){
                             });
                         }
                     });
-                    // res.redirect('/teams/'+uid);
                 }
             });
         }
     });
 });
 
+//Used for debugging locally
 // app.listen(8080,function(){
 //     console.log("Server has Started!");
 // });
